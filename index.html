@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso js</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        .product-item {
+            border-bottom: solid 1px rgb(243, 243, 243);
+            padding: 10px;
+        }
+        .style-js{
+            text-transform: uppercase;
+        }
+        .style2{
+            color:yellow!important;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <a class="navbar-brand text-white">MarketJS</a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Productos <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Compras</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col-9">
+                <div id="alerta">
+                    <!--
+                        <div class="alert alert-danger" role="alert">
+                            mensaje
+                        </div>
+                    -->
+                </div>
+
+                <div class="row" id="product-list">
+                    <div class="col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://elpiombino.com.pe/sanmiguel/wp-content/uploads/sites/2/2020/06/LECHE-GLORIA-CAJA-AZUL.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title nombre">Leche en caja</h5>
+                                <p class="card-text descripcion">Leche gloria para consumo</p>
+                                <a href="#"  class="btn btn-primary btn-block mb-1 btn-comprar">Comprar</a> <input
+                                    class="form-control" type="number" min="1" placeholder="Ingrese Cantidad" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://plazavea.vteximg.com.br/arquivos/ids/530099-450-450/20087939.jpg?v=637419674481030000"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title nombre">Sporade</h5>
+                                <p class="card-text descripcion">Bebida hidratante</p>
+                                <a href="#" class="btn btn-primary btn-block mb-1 btn-comprar">Comprar</a> <input
+                                    class="form-control" type="number" min="1" placeholder="Ingrese Cantidad" value="0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://www.saborusa.com/wp-content/uploads/2019/10/Vino-para-quedarse-Foto-destacada.png"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title nombre">Vino</h5>
+                                <p class="card-text descripcion">Vino tinto</p>
+                                <a href="#" class="btn btn-primary btn-block mb-1 btn-comprar">Comprar</a> <input
+                                    class="form-control" type="number" min="1" placeholder="Ingrese Cantidad" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://perfectdailygrind.com/es/wp-content/uploads/sites/2/2020/04/Hs_5Ce8ecmXodh-AdEVHyT07irPaZ-zAAhYkKYRJgS5CVzHKs0cAAdyeAF9TIgyh4KI5gqYmyuIDwJnf2f9wCdNvJ5WbQOlSoRr5zmmzMalyR1-RQxvlOtTZkJq9G_GPUiVZ6_WX-1-1024x683.jpeg"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title nombre">Chocolate</h5>
+                                <p class="card-text descripcion">Chocolate de cacao</p>
+                                <a href="#" class="btn btn-primary btn-block mb-1 btn-comprar">Comprar</a> <input
+                                    class="form-control" type="number" min="1" placeholder="Ingrese Cantidad" value="0">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-3 bg-light">
+                <h4 class="text-center">MI CARRITO</h4>
+                <div id="product-cart-items">
+                    <!--
+
+                        <div class="row product-item">
+                            <div class="col-5">
+                            <img style="width: 100%;" src="urlimagen" alt="algo">
+                            </div>
+                            <div class="col-7">
+                                <h6>Leche o algo xd</h6>
+                                <p>descripcion aqui</p>
+                                <span class="badge badge-primary d-block">4</span>
+                            </div>
+                        </div>
+                    -->
+                </div>
+                <form id="formulario">
+                    <input id="input-evento" class="form-control" type="text" name="eventName">
+                    <button type="submit"> Enviar</button>
+                </form>
+                <button id="agregar-compra" class="btn-dark btn-block">Agregar Compra</button>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <h2>Mis Compras</h2>
+            <table class="table table-light">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Cantidad</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    
+    <script src="./14-POO/setget.js"></script>
+</body>
+
+</html>
